@@ -1,8 +1,8 @@
 {
-  "equipo": "G00",
+  "equipo": "G12",
   "integrantes": [
-    { "nombre": "Nombre Apellido", "codigo": "CODIGO UTEC" },
-    { "nombre": "Nombre Apellido", "codigo": "CODIGO UTEC" },
-    { "nombre": "Nombre Apellido", "codigo": "CODIGO UTEC" }
+    { "nombre": "Marco Sabino Guardian", "codigo": "202220340" },
+    { "nombre": "Rodolfo Elard Huaroc", "codigo": "202220307" },
+    { "nombre": "John Blas Whur", "codigo": "" }
   ]
 }
