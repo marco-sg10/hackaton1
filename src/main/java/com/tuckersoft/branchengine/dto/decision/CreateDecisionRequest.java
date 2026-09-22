@@ -1,4 +1,4 @@
-﻿package com.tuckersoft.branchengine.dto.decision;
+package com.tuckersoft.branchengine.dto.decision;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

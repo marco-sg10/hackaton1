@@ -1,4 +1,4 @@
-﻿package com.tuckersoft.branchengine.dto.decision;
+package com.tuckersoft.branchengine.dto.decision;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

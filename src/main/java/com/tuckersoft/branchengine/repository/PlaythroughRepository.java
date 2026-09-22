@@ -1,7 +1,7 @@
-﻿package com.tuckersoft.branchengine.repository;
+package com.tuckersoft.branchengine.repository;
 
-import com.tuckersoft.branchengine.entity.Playthrough;
-import com.tuckersoft.branchengine.entity.User;
+import com.tuckersoft.branchengine.model.Playthrough;
+import com.tuckersoft.branchengine.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

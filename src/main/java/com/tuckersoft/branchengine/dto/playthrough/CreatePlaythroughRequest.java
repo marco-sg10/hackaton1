@@ -1,4 +1,4 @@
-﻿package com.tuckersoft.branchengine.dto.playthrough;
+package com.tuckersoft.branchengine.dto.playthrough;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

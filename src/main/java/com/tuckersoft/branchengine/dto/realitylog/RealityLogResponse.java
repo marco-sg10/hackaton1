@@ -1,4 +1,4 @@
-﻿package com.tuckersoft.branchengine.dto.realitylog;
+package com.tuckersoft.branchengine.dto.realitylog;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

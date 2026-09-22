@@ -1,4 +1,4 @@
-﻿package com.tuckersoft.branchengine.dto.playthrough;
+package com.tuckersoft.branchengine.dto.playthrough;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
