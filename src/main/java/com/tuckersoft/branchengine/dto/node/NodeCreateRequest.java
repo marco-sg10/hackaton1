@@ -22,7 +22,7 @@ public class NodeCreateRequest {
     private String sceneText;
 
     @NotNull
-    @Min(0)
+    @Min(1)
     private Integer branchCapacity;
 
     private String primaryBranchCode;
