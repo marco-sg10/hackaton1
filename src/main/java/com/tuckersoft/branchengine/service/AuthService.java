@@ -36,22 +36,17 @@ public class AuthService {
             throw new ApiException(HttpStatus.CONFLICT, "CONFLICT", "El email ya está registrado");
         }
 
-        String role = "ROLE_USER";
-        if (request.getRole() != null && (request.getRole().equals("ROLE_USER") || request.getRole().equals("ROLE_ADMIN"))) {
-            role = request.getRole();
-        }
-
         User user = User.builder()
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .displayName(request.getDisplayName())
-                .role(role)
+                .role("ROLE_USER")
                 .createdAt(Instant.now())
                 .build();
 
         userRepository.save(user);
 
-        String token = jwtService.generateToken(user.getEmail(), user.getRole());
+        String token = jwtService.generateToken(user.getEmail());
 
         return AuthResponse.builder()
                 .token(token)
@@ -64,7 +59,7 @@ public class AuthService {
 
     public AuthResponse login(LoginRequest request) {
         User user = userRepository.findByEmail(request.getEmail())
-                .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "USER_NOT_FOUND", "Usuario no encontrado"));
+                .orElseThrow(() -> new ApiException(HttpStatus.UNAUTHORIZED, "UNAUTHORIZED", "Credenciales incorrectas"));
 
         try {
             authenticationManager.authenticate(
@@ -74,7 +69,7 @@ public class AuthService {
             throw new ApiException(HttpStatus.UNAUTHORIZED, "UNAUTHORIZED", "Credenciales incorrectas");
         }
 
-        String token = jwtService.generateToken(user.getEmail(), user.getRole());
+        String token = jwtService.generateToken(user.getEmail());
 
         return AuthResponse.builder()
                 .token(token)
