@@ -1,10 +1,10 @@
-package org.example.hackaton1;
+package com.tuckersoft.branchengine;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Hackaton1ApplicationTests {
+class BranchEngineApplicationTests {
 
     @Test
     void contextLoads() {
